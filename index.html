@@ -7,12 +7,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">MADS Studio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 </head>
 <body>
 
 <!-- Hero -->
-<section class="hero">
+<section id="hero" class="hero">
     <div class="hero-content">
         <img src="assets/madslogo.png" alt="MADS Studio Logo" class="logo">
 
@@ -82,43 +105,98 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="container-fluid my-5 px-0">
-    <h2 class="text-center mb-5 fw-bold">Our Games</h2>
-    <div class="row g-0">
-        <!-- Mad Dice -->
-        <div class="col-md-4">
-            <div class="card card-hover shadow-sm bg-dark text-light border-0 h-100">
-                <img src="./assets/diceGame.png" class="card-img-top w-100" alt="diceGame" style="height: 300px; object-fit: cover;">
-                <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title fw-bold">Mad Dice</h5>
-                    <p class="card-text flex-grow-1">Roll the dice and conquer challenges in a strategic adventure.</p>
-                    <a href="mad-dice.html" class="hero-btn mt-auto">Learn More</a>
-                </div>
-            </div>
-        </div>
+<section id="projects" class="projects-section py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold text-light">Our Games</h2>
 
-        <!-- Neon Janitor -->
-        <div class="col-md-4">
-            <div class="card card-hover shadow-sm bg-dark text-light border-0 h-100">
-                <img src="https://source.unsplash.com/random/400x300/?neon,city" class="card-img-top w-100" alt="Neon Janitor" style="height: 300px; object-fit: cover;">
-                <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title fw-bold">Neon Janitor</h5>
-                    <p class="card-text flex-grow-1">Navigate a glowing cityscape while solving puzzles and cleaning chaos.</p>
-                    <a href="neon-janitor.html" class="hero-btn mt-auto">Learn More</a>
-                </div>
+        <!-- Bootstrap Carousel for Games -->
+        <div id="gamesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#gamesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#gamesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#gamesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-        </div>
+            <div class="carousel-inner">
+                <!-- Mad Dice Slide -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="./assets/diceGame.png" class="d-block w-100 rounded shadow" alt="Mad Dice" style="max-height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-6 text-light">
+                            <h3 class="fw-bold">Mad Dice</h3>
+                            <p class="lead">Roll the dice and conquer challenges in a strategic adventure. Each roll shapes your strategy as you face unpredictable enemies and obstacles.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2">Unity Engine</span>
+                                <span class="badge bg-warning text-dark">In Development</span>
+                            </div>
+                            <p><strong>Key Features:</strong></p>
+                            <ul>
+                                <li>Procedural Dice Mechanics</li>
+                                <li>Strategic Combat System</li>
+                                <li>PC & Console Release</li>
+                            </ul>
+                            <a href="mad-dice.html" class="hero-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Color Thief -->
-        <div class="col-md-4">
-            <div class="card card-hover shadow-sm bg-dark text-light border-0 h-100">
-                <img src="https://source.unsplash.com/random/400x300/?colorful,art" class="card-img-top w-100" alt="Color Thief" style="height: 300px; object-fit: cover;">
-                <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title fw-bold">Color Thief</h5>
-                    <p class="card-text flex-grow-1">Steal colors and rewrite reality in a stealth-driven world.</p>
-                    <a href="color-thief.html" class="hero-btn mt-auto">Learn More</a>
+                <!-- Neon Janitor Slide -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="https://source.unsplash.com/random/600x400/?neon,city" class="d-block w-100 rounded shadow" alt="Neon Janitor" style="max-height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-6 text-light">
+                            <h3 class="fw-bold">Neon Janitor</h3>
+                            <p class="lead">Step into a glowing world as a janitor with neon flair! Clean, fix, and interact with vibrant objects to solve puzzles and progress through a colorful cityscape.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2">Unity Engine</span>
+                                <span class="badge bg-warning text-dark">In Development</span>
+                            </div>
+                            <p><strong>Key Features:</strong></p>
+                            <ul>
+                                <li>Neon-Themed Puzzle Solving</li>
+                                <li>Interactive City Environments</li>
+                                <li>Mobile & PC Release</li>
+                            </ul>
+                            <a href="neon-janitor.html" class="hero-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color Thief Slide -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="https://source.unsplash.com/random/600x400/?colorful,art" class="d-block w-100 rounded shadow" alt="Color Thief" style="max-height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-6 text-light">
+                            <h3 class="fw-bold">Color Thief</h3>
+                            <p class="lead">Steal colors and rewrite reality in a stealth-driven world. Use color-based stealth to evade detection and manipulate your environment.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-success me-2">Godot Engine</span>
+                                <span class="badge bg-info text-dark">In The Works</span>
+                            </div>
+                            <p><strong>Key Features:</strong></p>
+                            <ul>
+                                <li>Color-Based Stealth Mechanics</li>
+                                <li>Reality Manipulation Gameplay</li>
+                                <li>2025 Release Target</li>
+                            </ul>
+                            <a href="color-thief.html" class="hero-btn">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#gamesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#gamesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 </section>
@@ -211,6 +289,16 @@
     document.getElementById('contact-form')?.addEventListener('submit', (e) => {
         e.preventDefault();
         alert('Thanks for reaching out! (This is a demo—integrate with a backend for real submissions.)');
+    });
+
+    // Smooth scrolling for navbar links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 </script>
 
