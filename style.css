@@ -135,7 +135,7 @@ a {
 }
 
 .mads-main .mads-s {
-    margin-left: 8px;
+    margin-left: 0;
 }
 
 .mads-sub {
@@ -441,6 +441,7 @@ footer {
 }
 
 .carousel-indicators .active {
+    
     background-color: #ffffff !important;
 }
 
@@ -456,4 +457,6 @@ footer {
     font-size: 0.8rem;
     padding: 0.5rem 0.75rem;
 }
-}
+
+
+
