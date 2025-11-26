@@ -75,6 +75,12 @@ a {
 }
 
 /* Buttons */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .hero-btn {
     position: relative;
     display: inline-block;
@@ -115,6 +121,25 @@ a {
 .hero-btn:active {
     transform: translateY(0);
     box-shadow: 0 2px 10px rgba(255, 0, 0, 0.4);
+}
+
+.steam-btn {
+    background: linear-gradient(145deg, #1a5f8a, #2d7ba8);
+    box-shadow: 0 4px 15px rgba(45, 123, 168, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.steam-btn:hover {
+    background: linear-gradient(145deg, #2d7ba8, #1a5f8a);
+    box-shadow: 0 8px 25px rgba(45, 123, 168, 0.5);
+}
+
+.steam-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
 }
 
 /* MADS Title */
